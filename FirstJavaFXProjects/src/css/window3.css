@@ -1,0 +1,6 @@
+.circular-image {
+    -fx-background-radius: 1000;
+    -fx-border-radius: 1000;
+    -fx-background-color: #1111;
+    -fx-overflow: hidden;
+}

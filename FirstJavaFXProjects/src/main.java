@@ -9,7 +9,7 @@ public class main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
        
-        Parent root = FXMLLoader.load(getClass().getResource("start_page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/start_page.fxml"));
         
         primaryStage.setTitle("CutQueue Barber Shop");
         primaryStage.setScene(new Scene(root));
@@ -21,5 +21,3 @@ public class main extends Application {
     }
 }
 
-
-// mahal ni nash si raven

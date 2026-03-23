@@ -16,7 +16,7 @@ public class StartPageController {
     @FXML
     private void handleStartClick(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("second_page.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/second_page.fxml"));
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
