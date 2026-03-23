@@ -1,0 +1,19 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx.base.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx.controls.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx.fxml.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx.graphics.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx.media.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx.swing.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx.web.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\javafx-swt.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\jdk.jsobject.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\jfx.incubator.input.jar",
+        "c:\\Eclipse Adoptium\\javafx-sdk-25.0.2\\lib\\jfx.incubator.richtext.jar",
+        "c:\\Users\\SAM\\Downloads\\mysql-connector-j-9.6.0\\mysql-connector-j-9.6.0.jar"
+    ]
+}

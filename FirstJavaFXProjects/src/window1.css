@@ -1,0 +1,17 @@
+.btn {
+    -fx-text-fill: black;
+    -fx-background-radius: 15;
+    -fx-font-size: 30px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.btn:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    
+}

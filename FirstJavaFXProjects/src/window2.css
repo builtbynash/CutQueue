@@ -1,0 +1,32 @@
+.form {
+    -fx-background-radius: 15;
+    -fx-font-size: 25px;
+}
+
+.btn-back {
+    -fx-font-family: serif;
+    -fx-background-color: #b4b4b4;
+    -fx-text-fill: #020202;
+    -fx-background-radius: 15;
+    -fx-font-size: 20px;
+}
+
+.btn-back:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+
+}
+
+.btn-choose {
+    -fx-font-family: serif;
+    -fx-background-color: #b4b4b4;
+    -fx-text-fill: #ffff;
+    -fx-background-radius: 15;
+    -fx-font-size: 20px;
+}
+
+.btn-choose:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+
+}
