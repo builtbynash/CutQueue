@@ -1,6 +1,176 @@
-.circular-image {
-    -fx-background-radius: 1000;
-    -fx-border-radius: 1000;
-    -fx-background-color: #1111;
-    -fx-overflow: hidden;
+.btn-bck {
+    -fx-background-color: rgb(0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.btn-bck:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
+}
+
+.btn-confirm {
+    -fx-background-color: #46923c;
+    -fx-cursor: hand;
+}
+
+.btn-confirm:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
+}
+
+.btn-select {
+    -fx-background-color: black;
+    -fx-cursor:hand;
+}
+
+.btn-select:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
+}
+
+.btn-done:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
+}
+
+.btn-cancel:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
+}
+
+.btn-edit:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
+}
+
+.btn-confirmskie:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
+}
+
+/* MAIN BOX * DATE */
+.custom-date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #2b2b2b;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* TEXT */
+.custom-date-picker .text-field {
+    -fx-text-fill: #2b2b2b;
+    -fx-font-weight: bold;
+}
+
+/* BUTTON (calendar icon) */
+.custom-date-picker .arrow-button {
+    -fx-background-color: #2b2b2b;
+}
+
+.custom-date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+/* POPUP BACKGROUND */
+.date-picker-popup {
+    -fx-background-color: white;
+}
+
+/* HEADER */
+.date-picker-popup .month-year-pane {
+    -fx-background-color: #2b2b2b;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ARROWS */
+.date-picker-popup .month-year-pane .arrow {
+    -fx-background-color: white;
+}
+
+/* DAYS DEFAULT */
+.date-cell {
+    -fx-text-fill: #2b2b2b;
+}
+
+/* HOVER */
+.date-cell:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+/* SELECTED DATE */
+.date-cell:selected {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+}
+
+/* TODAY */
+.date-cell:today {
+    -fx-border-color: #4caf50;
+    -fx-border-width: 1.5;
+}
+
+/*time*/
+
+/* DROPDOWN BACKGROUND */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #2b2b2b;
+}
+
+/* ITEMS (8:00 AM etc.) */
+.combo-box-popup .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #2b2b2b;
+    -fx-font-weight: bold;
+}
+
+/* HOVER */
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+/* SELECTED */
+.combo-box-popup .list-cell:selected {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/*BARBER SELECT*/
+
+.barber-combo .list-view {
+    -fx-background-color: white;
+    -fx-border-color: #111;
+    -fx-border-width: 1;
+}
+
+/* ITEM */
+.barber-combo .list-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #222;
+    -fx-font-size: 13px;
+    -fx-padding: 6 10 6 10;
+}
+
+/* HOVER */
+.barber-combo .list-cell:hover {
+    -fx-background-color: #f3f3f3;
+}
+
+/* SELECTED */
+.barber-combo .list-cell:selected {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
 }

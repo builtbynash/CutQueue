@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HairSelectionController">
+
+    <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+    <Pane prefHeight="70.0" prefWidth="1366.0" style="-fx-background-color: #2b2b2b;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+         <Label layoutX="585.0" layoutY="15.0" prefHeight="39.0" prefWidth="240.0" text="CUTQUEUE" textFill="WHITE">
+            <font>
+               <Font name="Serif Bold" size="35.0" />
+            </font>
+         </Label>
+      </children>
+    </Pane>
+
+    <!-- ═══════════════════════════ MAIN SCROLL AREA ════════════════════════ -->
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+        <VBox fillWidth="true" prefHeight="768.0" prefWidth="1366.0" spacing="24.0" style="-fx-background-color: #f5f5f5;">
+            <padding><Insets bottom="30.0" left="80.0" right="80.0" top="30.0" /></padding>
+
+            <Label style="-fx-font-family: 'Georgia'; -fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Choose a Service" />
+            <Separator />
+
+            <!-- ══ 10 SERVICE CARDS ══ -->
+            <!-- Row 1 — 5 cards -->
+            <HBox spacing="20.0">
+
+                <!-- 1. Regular Cut — HAIRCUT -->
+                <VBox fx:id="cardRegular" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Regular Cut" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Haircut  •  ₱100" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Regular Cut|100" />
+                </VBox>
+
+                <!-- 2. Fade Cut — HAIRCUT -->
+                <VBox fx:id="cardFade" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Fade Cut" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Haircut  •  ₱150" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Fade Cut|150" />
+                </VBox>
+
+                <!-- 3. Undercut — HAIRCUT -->
+                <VBox fx:id="cardUndercut" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Undercut" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Haircut  •  ₱120" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Undercut|120" />
+                </VBox>
+
+                <!-- 4. Full Color — HAIR COLOR -->
+                <VBox fx:id="cardFullColor" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Full Color" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Hair Color  •  ₱350" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Full Color|350" />
+                </VBox>
+
+                <!-- 5. Highlights — HAIR COLOR -->
+                <VBox fx:id="cardHighlights" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Highlights" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Hair Color  •  ₱500" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Highlights|500" />
+                </VBox>
+
+            </HBox>
+
+            <!-- Row 2 — 5 cards -->
+            <HBox spacing="20.0">
+
+                <!-- 6. Balayage — HAIR COLOR -->
+                <VBox fx:id="cardBalayage" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Balayage" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Hair Color  •  ₱700" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Balayage|700" />
+                </VBox>
+
+                <!-- 7. Classic Shave — SHAVE & GROOMING -->
+                <VBox fx:id="cardClassicShave" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Classic Shave" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Shave &amp; Grooming  •  ₱80" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Classic Shave|80" />
+                </VBox>
+
+                <!-- 8. Beard Trim — SHAVE & GROOMING -->
+                <VBox fx:id="cardBeardTrim" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Beard Trim" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Shave &amp; Grooming  •  ₱100" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Beard Trim|100" />
+                </VBox>
+
+                <!-- 9. Hot Towel Shave — SHAVE & GROOMING -->
+                <VBox fx:id="cardHotTowel" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Hot Towel Shave" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Shave &amp; Grooming  •  ₱150" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Hot Towel Shave|150" />
+                </VBox>
+
+                <!-- 10. Full Grooming Package — SHAVE & GROOMING -->
+                <VBox fx:id="cardGroomingPkg" prefWidth="212.0" spacing="10.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: HAND;" HBox.hgrow="ALWAYS">
+                    <StackPane alignment="CENTER" prefHeight="120.0">
+                        <Circle fill="#b0b0b0" radius="52.0" />
+                    </StackPane>
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Full Package" textFill="#0a0a0a" />
+                    <Label style="-fx-text-fill: #555; -fx-font-size: 11px;" text="Shave &amp; Grooming  •  ₱300" />
+                    <Button onAction="#selectStyle" prefWidth="182.0" style="-fx-background-radius: 6;" styleClass="btn-select" stylesheets="@../css/window3.css" text="Select" textFill="WHITE" userData="Full Grooming Package|300" />
+                </VBox>
+
+            </HBox>
+
+            <!-- ══ SELECTED SERVICE ROW ══ -->
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                <Label text="Selected Service:" textFill="#0a0a0a">
+               <font>
+                  <Font name="Serif Bold" size="12.0" />
+               </font></Label>
+                <Label fx:id="lblSelectedStyle" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="None" textFill="#0a0a0a">
+               <font>
+                  <Font name="Serif Bold" size="12.0" />
+               </font></Label>
+            </HBox>
+
+            <Separator />
+
+            <!-- ══ SCHEDULE APPOINTMENT ══ -->
+            <Label style="-fx-font-family: 'Georgia'; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Schedule Appointment" />
+
+            <HBox alignment="CENTER_LEFT" spacing="40.0">
+                <VBox spacing="8.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Select Date:" textFill="#0a0a0a">
+                  <font>
+                     <Font name="Serif Bold" size="12.0" />
+                  </font></Label>
+                    <DatePicker fx:id="appointmentDate" prefWidth="200.0" promptText="Pick a date" style="-fx-font-size: 13px;" stylesheets="@../css/window3.css">
+                  <styleClass>
+                     <String fx:value="custom-date-picker" />
+                     <String fx:value="text-field" />
+                     <String fx:value="arrow-button" />
+                     <String fx:value="arrow" />
+                     <String fx:value="date-picker-popup" />
+                     <String fx:value="month-year-pane" />
+                     <String fx:value="label" />
+                     <String fx:value="date-cell" />
+                  </styleClass></DatePicker>
+                </VBox>
+                <VBox spacing="8.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-background-radius: 6;" text="Select Time Slot:" textFill="#0a0a0a" />
+                    <ComboBox fx:id="appointmentTime" prefWidth="200.0" promptText="Choose time" style="-fx-font-size: 13px;" stylesheets="@../css/window3.css">
+                  <styleClass>
+                     <String fx:value="time-combo" />
+                     <String fx:value="list-cell" />
+                     <String fx:value="list-view" />
+                  </styleClass></ComboBox>
+                </VBox>
+                <VBox spacing="8.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px;" text="Select Barber:" textFill="#0a0a0a">
+                  <font>
+                     <Font name="Serif Bold" size="12.0" />
+                  </font></Label>
+                    <ComboBox fx:id="barberChoice" prefWidth="200.0" promptText="Choose barber" style="-fx-font-size: 13px; -fx-background-radius: 6;" stylesheets="@../css/window3.css">
+                  <styleClass>
+                     <String fx:value="barber-combo" />
+                     <String fx:value="list-cell" />
+                     <String fx:value="list-view" />
+                  </styleClass></ComboBox>
+                </VBox>
+            </HBox>
+
+        </VBox>
+    </ScrollPane>
+
+    <!-- ═══════════════════════════ BOTTOM NAVIGATION ════════════════════════ -->
+    <HBox alignment="CENTER_LEFT" prefHeight="70.0" spacing="10.0" style="-fx-background-color: #ebebeb; -fx-border-color: #cccccc; -fx-border-width: 1 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <padding><Insets left="80.0" right="80.0" /></padding>
+
+        <Pane HBox.hgrow="ALWAYS">
+         <children>
+            <Button layoutX="10.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleBackClick" prefHeight="35.0" prefWidth="140.0" style="-fx-background-radius: 10;" styleClass="btn-bck" stylesheets="@../css/window3.css" text="BACK" textFill="WHITE">
+               <font>
+                  <Font name="Serif Regular" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="992.0" layoutY="17.0" mnemonicParsing="false" onAction="#openPreviewPopup" prefHeight="35.0" prefWidth="215.0" style="-fx-background-radius: 10;" styleClass="btn-confirm" stylesheets="@../css/window3.css" text="CONFIRM APPOINTMENT" textFill="WHITE">
+               <font>
+                  <Font name="Serif Regular" size="15.0" />
+               </font>
+            </Button>
+         </children></Pane>
+    </HBox>
+
+    <!-- ═══════════════════════════════════════════════════════════════
+         OVERLAY — two VBox panels; controller toggles which is shown
+         ═══════════════════════════════════════════════════════════════ -->
+    <StackPane fx:id="overlayPane" style="-fx-background-color: rgba(0,0,0,0.55);" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <!-- ── PANEL A: PREVIEW — Edit and Cancel still available ── -->
+        <VBox fx:id="panelPreview" alignment="CENTER" managed="true" maxWidth="480.0" spacing="18.0" style="-fx-background-color: white; -fx-background-radius: 12;                      -fx-padding: 36; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 24, 0, 0, 8);" visible="true">
+
+            <StackPane alignment="CENTER">
+                <Circle fill="#f0a500" radius="36.0" />
+                <Label style="-fx-font-size: 26px;" text="⏱" />
+            </StackPane>
+
+            <Label style="-fx-font-family: 'Georgia'; -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Review Your Appointment" />
+
+            <Label maxWidth="380.0" style="-fx-font-size: 12px; -fx-text-fill: #888;" text="Check the details below. You can still edit or cancel before confirming." textAlignment="CENTER" wrapText="true" />
+
+            <VBox alignment="CENTER_LEFT" maxWidth="380.0" spacing="8.0" style="-fx-background-color: #f9f9f9; -fx-background-radius: 8; -fx-padding: 16;">
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Service :" />
+                    <Label fx:id="previewStyle" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Date :" />
+                    <Label fx:id="previewDate" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Time :" />
+                    <Label fx:id="previewTime" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Barber :" />
+                    <Label fx:id="previewBarber" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Price :" />
+                    <Label fx:id="previewPrice" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="12.0">
+                <Button onAction="#cancelAppointment" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: white; -fx-border-color: #e53935; -fx-border-width: 1.5;                                -fx-text-fill: #e53935; -fx-font-weight: bold; -fx-font-size: 12px;                                -fx-cursor: HAND; -fx-background-radius: 6; -fx-border-radius: 6;" styleClass="btn-cancel" stylesheets="@../css/window3.css" text="✕  CANCEL" />
+                <Button onAction="#editAppointment" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: white; -fx-border-color: #1976d2; -fx-border-width: 1.5;                                -fx-text-fill: #1976d2; -fx-font-weight: bold; -fx-font-size: 12px;                                -fx-cursor: HAND; -fx-background-radius: 6; -fx-border-radius: 6;" styleClass="btn-edit" stylesheets="@../css/window3.css" text="✎  EDIT" />
+                <Button onAction="#finalConfirm" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-weight: bold;                                -fx-font-size: 12px; -fx-cursor: HAND; -fx-background-radius: 6;" styleClass="btn-confirmskie" stylesheets="@../css/window3.css" text="✔  CONFIRM" />
+            </HBox>
+
+        </VBox>
+
+        <!-- ── PANEL B: CONFIRMED — Locked, no edit/cancel ── -->
+        <VBox fx:id="panelConfirmed" alignment="CENTER" managed="false" maxWidth="480.0" spacing="18.0" style="-fx-background-color: white; -fx-background-radius: 12;                      -fx-padding: 36; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 24, 0, 0, 8);" visible="false">
+
+            <StackPane alignment="CENTER">
+                <Circle fill="#4caf50" radius="44.0" />
+                <Label style="-fx-font-size: 34px; -fx-text-fill: white; -fx-font-weight: bold;" text="✓" />
+            </StackPane>
+
+            <Label style="-fx-font-family: 'Georgia'; -fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #2b2b2b;" text="Appointment Confirmed!" />
+
+            <Label maxWidth="380.0" style="-fx-font-size: 12px; -fx-text-fill: #e53935; -fx-font-weight: bold;" text="Your appointment is locked. No changes can be made." textAlignment="CENTER" wrapText="true" />
+
+            <VBox alignment="CENTER_LEFT" maxWidth="380.0" spacing="8.0" style="-fx-background-color: #f1f8e9; -fx-border-color: #a5d6a7; -fx-border-width: 1;                          -fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 16;">
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Service :" />
+                    <Label fx:id="confirmedStyle" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Date :" />
+                    <Label fx:id="confirmedDate" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Time :" />
+                    <Label fx:id="confirmedTime" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Barber :" />
+                    <Label fx:id="confirmedBarber" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+                <HBox spacing="12.0">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 13px; -fx-min-width: 80;" text="Price :" />
+                    <Label fx:id="confirmedPrice" style="-fx-font-size: 13px;" text="—" />
+                </HBox>
+            </VBox>
+
+            <Separator />
+
+            <Label maxWidth="380.0" style="-fx-font-size: 11px; -fx-text-fill: #777;" text="Please arrive 5 minutes before your schedule." textAlignment="CENTER" wrapText="true" />
+
+            <Button onAction="#doneAndGoHome" prefHeight="38.0" prefWidth="160.0" style="-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-font-weight: bold;                            -fx-font-size: 13px; -fx-cursor: HAND; -fx-background-radius: 6;" styleClass="btn-done" stylesheets="@../css/window3.css" text="DONE" />
+
+        </VBox>
+
+    </StackPane>
+
+</AnchorPane>

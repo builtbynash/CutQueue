@@ -18,5 +18,10 @@
             <Image url="@../images/logo.png" />
          </image>
       </ImageView>
+      <Button fx:id="adminButton" layoutX="584.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleAdminClick" prefHeight="38.0" prefWidth="195.0" style="-fx-background-radius: 15;" styleClass="btn-admin" stylesheets="@../css/window1.css" text="ADMIN LOGIN">
+         <font>
+            <Font name="Serif Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

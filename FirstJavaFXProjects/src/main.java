@@ -4,13 +4,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class main extends Application {
+public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-       
+
         Parent root = FXMLLoader.load(getClass().getResource("view/start_page.fxml"));
-        
+
         primaryStage.setTitle("CutQueue Barber Shop");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
@@ -20,4 +20,3 @@ public class main extends Application {
         launch(args);
     }
 }
-

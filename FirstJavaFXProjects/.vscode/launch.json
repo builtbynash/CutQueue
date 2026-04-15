@@ -8,7 +8,7 @@
             "type": "java",
             "name": "main",
             "request": "launch",
-            "mainClass": "main",
+            "mainClass": "application.Main",
             "projectName": "FirstJavaFXProjects_c044fe2f",
             "vmArgs": "--module-path \"C:/Eclipse Adoptium/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },
@@ -22,7 +22,7 @@
             "type": "java",
             "name": "main",
             "request": "launch",
-            "mainClass": "main",
+            "mainClass": "application.Main",
             "projectName": "FirstJavaFXProjects_c044fe2f",
             "vmArgs": "--module-path \"C:/Eclipse Adoptium/javafx-sdk-25.0.2/lib\" --add-modules javafx.controls,javafx.fxml"
         },

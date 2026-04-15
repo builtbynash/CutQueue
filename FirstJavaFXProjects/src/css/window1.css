@@ -12,6 +12,19 @@
 
     -fx-background-color: transparent;
     -fx-border-color: transparent;
+    -fx-cursor: hand;
 
     
+}
+
+.btn-admin {
+    -fx-background-color: #D4AF37;
+}
+
+.btn-admin:hover {
+    -fx-background-color: #b8962e;
+    -fx-cursor: hand;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 8, 0.4, 0, 3);
 }
